@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Send a message</title>
+ <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+ <script type="text/javascript" src="js/callback.js"></script>
+ <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+</head>
+<body>
+	<h1>Send a message</h1>
+<div class="content">
+	<form id="theForm">
+	<div>
+		<label for="message">Message<br>
+		<span class="error" id="messageError"></span></label>
+		<textarea name="message" id="message"></textarea>
+	</div>
+	<div>
+		<label for="number">Phone number (e.g. 0501234567)<br>
+		<span class="error" id="numberError"></span></label>
+		<input name="number" id="number">
+	</div>
+	<div class="nolabel">
+		<input type="submit" value="Send" id="send">
+	</div>
+	</form>
+</div>
+</body>
+</html>

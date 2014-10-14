@@ -1,0 +1,26 @@
+body {
+	font-family: Helvetica, sans-serif;
+}
+
+.error {
+	color: #ee2020;
+}
+
+.content {
+	width: 500px;
+}
+
+#message {
+	width: 200px;
+	height: 60px;
+}
+
+.content label {
+	display: inline-block;
+	vertical-align: top;
+	width: 250px;
+}
+
+.nolabel {
+	margin-left: 250px;
+}
