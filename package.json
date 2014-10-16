@@ -1,0 +1,19 @@
+{
+  "name": "simpleform",
+  "version": "1.0.0",
+  "description": "A web app for learning front end js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ykarikos/simpleform.git"
+  },
+  "author": "Yrjö Kari-Koskinen <ykk@peruna.fi>",
+  "license": "MIT",
+  "dependencies": {
+      "express": "4.9.7"
+    },
+    "engine": "node 0.10.x"
+}
