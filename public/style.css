@@ -19,8 +19,13 @@ body {
 	display: inline-block;
 	vertical-align: top;
 	width: 250px;
+	height: 35px;
 }
 
 .nolabel {
 	margin-left: 250px;
+}
+
+#spinner {
+	display: none;
 }

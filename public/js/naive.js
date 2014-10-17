@@ -18,35 +18,33 @@ function checkMessage() {
 	}
 }
 
-function checkNumber(msgOk, then) {
+function checkNumber() {
 	var num = $("#number").val().trim();
-
 	$.get("/check-number", { num: num })
 	.done(function(data) {
 		error("number", "");
 		$("#spinner").hide();
-		if (msgOk && then) {
-			then();
-		}
+		return true;
 	}).fail(function() {
 		error("number", "Invalid number");
 		$("#spinner").hide();
+		return false;
 	});
 }
 
-function checkForm(then) {
+function checkForm() {
+	var numOk = checkNumber();
 	var msgOk = checkMessage();
-	checkNumber(msgOk, then);
+	return numOk && msgOk;
 }
 
 function sendMessage() {
-	$("#spinner").hide();
 	var msg = $("#message").val().trim();
 	var num = $("#number").val().trim();
 
 	var logMsg = "Message '" + msg + "' was sent to " + num;
-	console.log(logMsg);
 	alert(logMsg);
+	console.log(logMsg);
 
 	$("#message").val("");
 	$("#number").val("");
@@ -61,6 +59,10 @@ $(document).ready(function() {
 		event.preventDefault();
 		$("#spinner").show();
 
-		checkForm(sendMessage);
+		var formOk = checkForm();
+
+		if (formOk) {
+			sendMessage();
+		}
 	});
 });

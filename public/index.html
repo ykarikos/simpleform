@@ -11,17 +11,18 @@
 <div class="content">
 	<form id="theForm">
 	<div>
-		<label for="message">Message<br>
+		<label for="message">Message*<br>
 		<span class="error" id="messageError"></span></label>
 		<textarea name="message" id="message"></textarea>
 	</div>
 	<div>
-		<label for="number">Phone number (e.g. 0501234567)<br>
+		<label for="number">Phone number (e.g. 0501234567)*<br>
 		<span class="error" id="numberError"></span></label>
 		<input name="number" id="number">
 	</div>
 	<div class="nolabel">
 		<input type="submit" value="Send" id="send">
+		<img src="/images/ajax-loader.gif" id="spinner">
 	</div>
 	</form>
 </div>
