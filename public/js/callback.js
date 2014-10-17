@@ -20,13 +20,14 @@ function checkMessage() {
 
 function checkNumber() {
 	var num = $("#number").val().trim();
-	if (!validNumber(num)) {
-		error("number", "Invalid number");
-		return false;
-	} else {
+	$.get("/check-number", { num: num })
+	.done(function(data) {
 		error("number", "");
 		return true;
-	}
+	}).fail(function() {
+		error("number", "Invalid number");
+		return false;
+	});
 }
 
 function checkForm() {
