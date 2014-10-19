@@ -2,11 +2,6 @@ function error(id, text) {
 	$("#" + id + "Error").text(text);
 }
 
-function validNumber(num) {
-	var intRegex = /^\d+$/;
-	return intRegex.test(num) && num.length == 10;
-}
-
 function checkMessage() {
 	var msg = $("#message").val().trim();
 	if (!msg) {
